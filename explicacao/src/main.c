@@ -98,8 +98,8 @@ void Matrix( int ** matrix , int linhaTamanho , int * colunaTamanho ) {
 
 void ParametrosLista() {
     // pode usar para fazer heap e stack
-    int vetor[] = { 1 , 2 , 3 , 4 , 5};
-    struct lista * lista = CreateLista( vetor , 5 );
+    int vetor[] = { 1 , 2 , 3 , 4 , 5 , 6};
+    struct lista * lista = CreateLista( vetor , 6 );
     Lista( lista );
 }
 
@@ -165,7 +165,7 @@ void RetornoVetor() {
     for ( int i = 0 ; i < *tamanho ; i++ ) {
         
     }
-    printf( "Vetor Recebido: " );
+    printf( "Vetor Recebido: " );   
     for ( int i = 0 ; i < *tamanho ; i++ ) {
         printf( "%d ," , array[i] );
     }
@@ -201,12 +201,17 @@ int ** MatrixRetorno( int * linhas , int ** colunas ) {
     *linhas = 5;
     int ** matrix = ( int ** )malloc( sizeof( int * ) * *linhas ); // alocar uma matrix dinaminacamnete um otimo exercicio
     *colunas = ( int * )malloc( sizeof( int ) * *linhas );
+
+
     colunas[0][0] = 1;
     matrix[0] = ( int *)malloc( sizeof( int ) * colunas[0][0] );
     matrix[0][0] = 1;
+
+
     colunas[0][1] = 1;
     matrix[1] = ( int *)malloc( sizeof( int ) * colunas[0][1] );
     matrix[1][0] = 1;
+
     colunas[0][2] = 1;
     matrix[2] = ( int *)malloc( sizeof( int ) * colunas[0][2] );
     matrix[2][0] = 1;
@@ -214,6 +219,9 @@ int ** MatrixRetorno( int * linhas , int ** colunas ) {
     matrix[3] = ( int *)malloc( sizeof( int ) * colunas[0][3] );
     matrix[3][0] = 1;
     matrix[3][1] = 2;
+
+
+    
     colunas[0][4] = 2;
     matrix[4] =  ( int *)malloc( sizeof( int ) * colunas[0][4] );
     matrix[4][0] = 1;
